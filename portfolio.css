@@ -6,6 +6,7 @@
   padding: 0;
   font-family: "Inter";
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #242424;
@@ -14,7 +15,9 @@ body {
 }
 
 
-* {box-sizing: border-box;}
+* {box-sizing: border-box;
+text-decoration: none;
+}
 
 
 
@@ -24,7 +27,7 @@ body.dark .velocity-sub-text,body.dark .btn-2,body.dark .feature-header{color:bl
 body.dark .btn-2:hover{
   color: var(--primary-green);
 }
-body.dark .feature-header,body.dark .feature-box,body.dark .aboutme-box,body.dark .project,body.dark .navbar-mobile-menu{
+body.dark .feature-header,body.dark .feature-box,body.dark .experience-box, body.dark .aboutme-box,body.dark .project,body.dark .navbar-mobile-menu{
   background: #dbd8d8;
 
 }
@@ -57,7 +60,7 @@ body.dark .navbar-mobile-menu li{
 
 body.dark .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #f78787,yellow, #9b9ae4,#b3f5ad, #f78787);
+    background: linear-gradient(45deg, #6fb3f7, #9ddaf1, #50e5f0, #a8ebfc);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -464,9 +467,10 @@ body.dark .social-icons a{
   align-items: flex-start;
 }
 .home-img {
-  width: 450px;
+  width: 300px;
   cursor: pointer;
   transition: 0.35s;
+  margin-top:-8px;
 }
 .home-img:hover {
   transform: scale(1.1);
@@ -620,7 +624,7 @@ body.dark .social-icons a{
   flex-direction: column;
   gap: 1.5vh;
   flex: 1;
-  
+  padding-bottom: 23px;
   width: 450px;
   cursor: pointer;
   transition: 0.35s;
@@ -638,6 +642,7 @@ body.dark .social-icons a{
 .feature-description {
   font-size: 15px;
   color: #9E9E9E;
+  
 }
 .feature-img {
   background: #1c1c1c;
@@ -674,6 +679,14 @@ body.dark .social-icons a{
 .aboutme-img {
   width: 225px;
 }
+.aboutme-img {
+  width: 225px;
+  transition: 0.35s;
+  cursor: pointer;
+}
+.aboutme-img:hover{
+  transform: scale(1.1);
+}
 .aboutme-description {
   color: #9E9E9E;
   font-size: 16px;
@@ -706,7 +719,7 @@ body.dark .social-icons a{
 .project-header {
   color: white;
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 12vh;
   font-size: 30px;
 }
 .project-box {
@@ -729,7 +742,7 @@ body.dark .social-icons a{
   max-width: 100%;
 }
 .probox{
-    width: 33.33%;  
+    width: 20%;  
     padding:20px;
     white-space: nowrap;
 
@@ -741,7 +754,6 @@ body.dark .social-icons a{
 .project {
   background: #2F2F2F;
   padding: 20px;
-  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   align-items: center;
@@ -758,13 +770,11 @@ body.dark .social-icons a{
   font-size: 15px;
 }
 .project-img {
-  width: 200px;
+  width: 100px;
   margin-top: 2.5vh;
-  border-radius: 8px;
-  background-color: black;
     transition: 0.20s;
+  height:100px;
 
-  border: 1px solid #9E9E9E;
 }
 .project-img:hover {
   transform: scale(0.9);
@@ -852,6 +862,25 @@ body.dark .social-icons a{
   margin-top: 15vh;
   font-size: 30px;
 }
+.experience-box {
+  background: #2f2f2f;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5vh;
+  flex: 1;
+  padding-bottom: 23px;
+  width: 450px;
+  cursor: pointer;
+  transition: 0.35s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.experience-box:hover {
+  transform: scale(1.05);
+
+}
 .hiring {
   padding: 20px;
   border-radius: 8px;
@@ -890,7 +919,7 @@ body.dark .social-icons a{
 .copyright-text {
   color: #9E9E9E;
   text-align: center;
-  padding: 25px;
+  padding: 10px;
 }
 @media only screen and (max-width: 1300px) {
   .hiring {
@@ -910,6 +939,11 @@ body.dark .social-icons a{
     text-align: center;
     width: 100%;
   }
+  .home-img {
+
+    margin-left: 80px;
+  }
+  
 }
 @media only screen and (max-width: 1115px) {
   .hiring {
@@ -948,7 +982,10 @@ body.dark .social-icons a{
   .project-img{
     width: 150px;
   }
-  
+  .home-img {
+
+    margin-left: 80px;
+  }
 }
 @media only screen and (max-width: 850px) {
   .hiring {
@@ -987,7 +1024,10 @@ body.dark .social-icons a{
   .project-img{
     width: 125px;
   }
-  
+  .home-img {
+
+    margin-left: 60px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .feature-box {
@@ -1049,14 +1089,20 @@ body.dark .social-icons a{
   .project-img{
     width: 100px;
   }
+  .home-img {
+
+    margin-left: 60px;
+  }
 }
 :root{
   --first-color: white;
   --first-color-light: #fff;
-  --facebook:#426782;
+  --discord:#8660b8;
   --twitter:#1da1f2;
   --instagram:#e1306c;
-  --youtube:#ff0000; 
+  --snapchat:#e5ff00; 
+  --linkedin:#0077ff; 
+
 }
 .social-icons {
   display: flex;
@@ -1075,7 +1121,7 @@ justify-content: center;
   transform:translateY(-2px);
 }
 .social-icons a:nth-child(1):hover{
-  color:var(--facebook);
+  color:var(--discord);
 }
 .social-icons a:nth-child(2):hover{
   color:var(--twitter);
@@ -1083,6 +1129,8 @@ justify-content: center;
 .social-icons a:nth-child(3):hover{
   color:var(--instagram);
 }
+
 .social-icons a:nth-child(4):hover{
-  color:var(--youtube);
+  color:var(--linkedin);
 }
+
