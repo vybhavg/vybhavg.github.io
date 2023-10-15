@@ -501,6 +501,9 @@ body.dark .social-icons a{
 .certify{
   text-align: center;
 }
+.exper{
+  text-align: center;
+}
 .typewrite{
   color: var(--primary-green);
   font-size: 25px;
@@ -1092,4 +1095,3 @@ color: white;
   text-align: center;
 
 }
-
